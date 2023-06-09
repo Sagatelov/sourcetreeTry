@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     enum filmType: String {
         case film1 = "Spider man"
         case film2 = "Venom"
+        case film3 = "Spider man2"
         
     }
     
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
         
         let alertAction = UIAlertAction(title: "ok", style: .default)
         let alertActionCancel = UIAlertAction(title: "cancel", style: .cancel)
+        let filmAction = UIAlertAction(title: "ok", style: .default, handler: handler(.film3))
         
         alert.addAction(alertAction)
         alert.addAction(alertActionCancel)

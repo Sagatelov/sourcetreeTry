@@ -17,14 +17,12 @@ class ViewController: UIViewController {
     enum filmType: String {
         case film1 = "Spider man"
         case film2 = "Venom"
+        case film3 = "Запах женщины"
         
     }
     
-    let handler: (_ filmType: filmType) -> (UIAlertAction) -> Void = {
-        filmType in
-        return {
-            action in
-            print(filmType.rawValue)
+    let handler: (filmType) -> (UIAlertAction) -> Void = { type in
+        return { _ in print(type.rawValue)
         }
         
     }
@@ -32,9 +30,11 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Photo access", message: "Your photo is not the good pass", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "ok", style: .default, handler: handler(.film1))
         let alertActionCancel = UIAlertAction(title: "cancel", style: .cancel, handler: handler(.film2))
+        let filmAction = UIAlertAction(title: "lovely film", style: .default, handler: handler(.film3))
         
         alert.addAction(alertAction)
         alert.addAction(alertActionCancel)
+        alert.addAction(filmAction)
         
         present(alert, animated: true)
         

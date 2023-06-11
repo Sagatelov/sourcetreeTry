@@ -18,11 +18,15 @@ class ViewController: UIViewController {
         case film1 = "Spider man"
         case film2 = "Venom"
         case film3 = "Запах женщины"
+        case film3 = "Spider man2"
         
     }
     
-    let handler: (filmType) -> (UIAlertAction) -> Void = { type in
-        return { _ in print(type.rawValue)
+    let handler: (_ filmType: filmType) -> (UIAlertAction) -> Void = {
+        filmType in
+        return {
+            action in
+            print(filmType.rawValue)
         }
         
     }

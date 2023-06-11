@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     enum filmType: String {
         case film1 = "Spider man"
         case film2 = "Venom"
+        case film3 = "Запах женщины"
         case film3 = "Spider man2"
         
     }
@@ -33,9 +34,11 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Photo access", message: "Your photo is not the good pass", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "ok", style: .default, handler: handler(.film1))
         let alertActionCancel = UIAlertAction(title: "cancel", style: .cancel, handler: handler(.film2))
+        let filmAction = UIAlertAction(title: "lovely film", style: .default, handler: handler(.film3))
         
         alert.addAction(alertAction)
         alert.addAction(alertActionCancel)
+        alert.addAction(filmAction)
         
         present(alert, animated: true)
         
@@ -49,7 +52,6 @@ class ViewController: UIViewController {
         
         let alertAction = UIAlertAction(title: "ok", style: .default)
         let alertActionCancel = UIAlertAction(title: "cancel", style: .cancel)
-        let filmAction = UIAlertAction(title: "ok", style: .default, handler: handler(.film3))
         
         alert.addAction(alertAction)
         alert.addAction(alertActionCancel)

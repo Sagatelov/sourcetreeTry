@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         case film1 = "Spider man"
         case film2 = "Venom"
         case film3 = "Запах женщины"
-        case film3 = "Spider man2"
+        case film4 = "Spider man2"
         
     }
     
